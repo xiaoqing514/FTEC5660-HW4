@@ -205,7 +205,10 @@ def _document_metadata(soup: BeautifulSoup) -> tuple[str, int, str]:
         h1 = _squash_space(soup.find("h1").get_text(" ", strip=True))
     h2_text = " ".join(_squash_space(h.get_text(" ", strip=True))
                        for h in soup.find_all(["h2", "h3"])[:4])
+    cover_text = " ".join(_squash_space(p.get_text(" ", strip=True))
+                          for p in soup.find_all("p")[:6])
     probe = f"{title} {h1} {h2_text}".lower()
+    head_text = f"{title} {h1} {cover_text}"
 
     broker = soup.find("div", class_="broker")
     if broker is not None or "equity research" in probe or "results review" in probe:
@@ -218,22 +221,23 @@ def _document_metadata(soup: BeautifulSoup) -> tuple[str, int, str]:
         doc_type = "annual_report"
 
     year = None
+    head = head_text.lower()
     if doc_type == "research_report":
-        match = re.search(r"fy\s*(\d{4})\s+results review", probe)
+        match = re.search(r"fy\s*(\d{4})\s+results review", head)
         if match is None:
-            match = re.search(r"fy\s*(\d{4})", probe)
+            match = re.search(r"fy\s*(\d{4})", head)
         if match is None:
-            match = re.search(r"(20\d{2})", probe)
+            match = re.search(r"(20\d{2})", head)
     elif doc_type == "earnings_call":
-        match = re.search(r"(?:full year|fourth quarter and full year)\s+(\d{4})", probe)
+        match = re.search(r"(?:full year|fourth quarter and full year)\s+(\d{4})", head)
         if match is None:
-            match = re.search(r"(20\d{2})", probe)
+            match = re.search(r"(20\d{2})", head)
     else:
-        match = re.search(r"annual report\s+(\d{4})", probe)
+        match = re.search(r"annual report\s+(\d{4})", head)
         if match is None:
-            match = re.search(r"year ended 31 december\s+(\d{4})", probe)
+            match = re.search(r"year ended 31 december\s+(\d{4})", head)
         if match is None:
-            match = re.search(r"(20\d{2})", probe)
+            match = re.search(r"(20\d{2})", head)
     if match is not None:
         year = int(match.group(1))
 
@@ -476,9 +480,10 @@ def _unknown_companies(question: str, taken: list[tuple[int, int]]) -> list[str]
     for match in pattern.finditer(masked):
         tokens = [re.sub(r"'s$", "", token, flags=re.I)
                   for token in match.group(0).replace(".", " ").split() if token]
-        while tokens and tokens[0].lower() in _RUN_STARTERS:
+        edge_words = _RUN_STARTERS | _UPPER_TOKENS
+        while tokens and tokens[0].lower() in edge_words:
             tokens.pop(0)
-        while tokens and tokens[-1].lower() in _RUN_STARTERS:
+        while tokens and tokens[-1].lower() in edge_words:
             tokens.pop()
         possessive = masked[match.end():match.end() + 2].lower() == "'s"
         if len(tokens) < 2 and not (len(tokens) == 1 and possessive):
@@ -488,8 +493,7 @@ def _unknown_companies(question: str, taken: list[tuple[int, int]]) -> list[str]
             continue
         if any(token.lower() in _MONTHS for token in tokens):
             continue
-        if any(re.fullmatch(r"(?:FY|Q)\d+", token, re.I) or token.lower() in _UPPER_TOKENS
-               for token in tokens):
+        if any(re.fullmatch(r"(?:FY|Q)\d+", token, re.I) for token in tokens):
             continue
         name = " ".join(tokens).strip(" ,.;:")
         if company_key(name) in _CORPUS_TOPICS:

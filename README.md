@@ -120,13 +120,13 @@ and the same scoring functions.
 
 | Variant | One change relative to the row above | Recall@5 | kept | rejected | Answer accuracy | Time |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| B0 | naive RAG baseline (`get_text`, recursive splitter, whitespace BM25, no parsing, never `[]`) | 28.3% | 100% | 0% | 43.3% | 6.8 s |
-| V1 | `table_to_text` + section/table-aware chunking | 78.3% | 100% | 0% | 78.3% | 6.3 s |
-| V2 | metadata filtering from `parse_query` (company + doc type) | 89.1% | 100% | 0% | 88.3% | 6.1 s |
-| V3 | fiscal-year-aware document selection | 93.5% | 100% | 0% | 91.7% | 6.3 s |
-| V4 | per-company quota for comparison questions | 93.5% | 100% | 0% | 91.7% | 6.3 s |
-| V5 | richer tokeniser, synonyms, section/metric ranking boosts | 100% | 100% | 0% | 96.7% | 6.9 s |
-| V6 | abstention on unknown company, uncovered year, undisclosed metric | 100% | 100% | 100% | 100% | 4.8 s |
+| B0 | naive RAG baseline (`get_text`, recursive splitter, whitespace BM25, no parsing, never `[]`) | 28.3% | 100% | 0% | 43.3% | 7.2 s |
+| V1 | `table_to_text` + section/table-aware chunking | 78.3% | 100% | 0% | 76.7% | 6.6 s |
+| V2 | metadata filtering from `parse_query` (company + doc type) | 89.1% | 100% | 0% | 86.7% | 6.2 s |
+| V3 | fiscal-year-aware document selection | 93.5% | 100% | 0% | 91.7% | 6.1 s |
+| V4 | per-company quota for comparison questions | 93.5% | 100% | 0% | 91.7% | 6.2 s |
+| V5 | richer tokeniser, synonyms, section/metric ranking boosts | 100% | 100% | 0% | 96.7% | 7.0 s |
+| V6 | abstention on unknown company, uncovered year, undisclosed metric | 100% | 100% | 100% | 100% | 5.3 s |
 
 `kept` is the share of answerable questions with a non-empty result and `rejected` the share of
 unanswerable questions with `[]`; B0–V5 never abstain, so their `rejected` is 0. Accuracy is over
@@ -137,7 +137,7 @@ Each row has its own CSV in `experiments/results_<variant>.csv`; the summary is
 
 **What each change did.**
 
-* **V1 (table text + chunking): +50.0 recall, +35.0 accuracy.** This is the largest single jump.
+* **V1 (table text + chunking): +48.4 recall, +33.4 accuracy.** This is the largest single jump.
   `get_text()` turns a balance sheet into a stream of numbers with no row or column, and the
   recursive splitter cuts through tables and mixes sections. Keeping one line per row with its
   label and year header, and adding a company/year/section header to every chunk, lets BM25 find
@@ -146,7 +146,7 @@ Each row has its own CSV in `experiments/results_<variant>.csv`; the summary is
   question about one company retrieves another company's nearly identical governance or income
   statement section. In B0, `q010` (“Who was Brightwater Software's CEO?”) returned Corvane,
   Halcyon, Kestrel, Brightwater Energy and Northgate — every company except the right one.
-* **V3 (year coverage): +4.3 recall, +3.3 accuracy.** Every annual report contains two year
+* **V3 (year coverage): +4.3 recall, +5.0 accuracy.** Every annual report contains two year
   columns, so the same metric and company appears in two reports. Preferring the report of the
   named year (and using FY2024 for FY2023 facts) removes the column ambiguity; the effect is
   smaller than the company filter because both copies of a value are identical when they exist.

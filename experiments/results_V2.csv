@@ -45,12 +45,12 @@ q043,table,"How much revenue did Halcyon Freight's Intermodal segment generate i
 q044,unanswerable,"What was Orchid Bay Resorts' operating income in FY2024, in USD millions?",doc_001.html;doc_002.html;doc_003.html;doc_004.html;doc_005.html,,231.3,False
 q045,table,"How much revenue did Lumen Harbor Foods' Bakery segment generate in FY2024, in USD millions?",doc_023.html;doc_036.html,True,634.6,True
 q046,table,"What was Sablewood Retail's gross profit in FY2023, in USD millions?",doc_004.html;doc_018.html,False,NOT_FOUND,False
-q047,table,"What were Corvane Pharma's total assets at 31 December 2024, in USD millions?",doc_024.html;doc_031.html,True,2711.4,True
+q047,table,"What were Corvane Pharma's total assets at 31 December 2024, in USD millions?",doc_024.html;doc_031.html,True,"2,711.4",True
 q048,fact,Who was Northgate Robotics' Chief Financial Officer at the end of FY2025?,doc_028.html;doc_038.html,True,Thomas Kaur,True
 q049,unanswerable,"What was Brightwater Energy's operating income in FY2022, in USD millions?",doc_003.html;doc_032.html,,NOT_FOUND,True
-q050,table,"How much revenue did Brightwater Software generate in Europe, Middle East and Africa in FY2023, in USD millions?",doc_020.html;doc_027.html,True,493.5,True
+q050,table,"How much revenue did Brightwater Software generate in Europe, Middle East and Africa in FY2023, in USD millions?",doc_020.html;doc_027.html,True,386.8,False
 q051,table,"What were Northgate Robotics' net accounts receivable at 31 December 2025, in USD millions?",doc_028.html;doc_038.html,True,492.1,True
-q052,table,"What were Kestrel Semiconductor's total assets at 31 December 2024, in USD millions?",doc_005.html;doc_026.html,True,3175.5,True
+q052,table,"What were Kestrel Semiconductor's total assets at 31 December 2024, in USD millions?",doc_005.html;doc_026.html,True,"3,175.5",True
 q053,comparison,Which company had more employees at 31 December 2024: Brightwater Energy or Corvane Pharma?,doc_003.html;doc_024.html;doc_031.html;doc_032.html,True,Corvane Pharma,True
 q054,table,"What was the value of Lumen Harbor Foods' inventories at 31 December 2025, in USD millions?",doc_023.html;doc_036.html,False,NOT_FOUND,False
 q055,table,"How much cash and cash equivalents did Sablewood Retail hold at 31 December 2023, in USD millions?",doc_004.html;doc_018.html,True,456.2,True
