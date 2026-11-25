@@ -1,0 +1,9 @@
+{
+  "B0": "naive baseline: get_text + RecursiveCharacterTextSplitter + whitespace BM25 top-5, no parsing, never []",
+  "V1": "table_to_text and section/table-aware chunking (chunk_document)",
+  "V2": "metadata filtering from parse_query (company + doc type)",
+  "V3": "fiscal-year-aware document selection",
+  "V4": "per-company quota for comparison questions",
+  "V5": "richer tokeniser, synonyms and section/metric boosts",
+  "V6": "abstention on unknown companies, uncovered years, undisclosed metrics (submitted hw4.py)"
+}
