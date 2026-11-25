@@ -228,63 +228,16 @@ public_test/                   40 documents, 60 questions, 12 tables, metadata (
 
 ## Task 6: Reflection
 
-**What kind of person would I want to be in that world?**
-I would want to be the person who knows what is worth doing, not just the person who can do
-things quickly. In a world where agents can write, program, research and decide, the scarce
-resource is not output; it is direction, judgment and care. I would like to be someone who asks
-better questions, who can tell a plausible answer from a true one, and who stays accountable for
-the consequences of a decision even when an agent did the analysis. I would also like to remain
-someone who is easy to trust: candid about uncertainty, generous with credit, and steady when
-things go wrong.
+十年之后，强大的个人 AI 助手会承担大量写作、编程、研究和决策工作，我希望自己成为能够判断什么值得做、并且愿意为判断承担后果的人。这样的判断来自对行业、机构和人性的长期理解，也来自在具体问题里反复核对证据的习惯。完成这次作业时，真正耗费心力的部分在于确认某一条数字来自哪张表、哪一年、哪家公司，生成一句流畅的答案相对容易。我希望十年后的自己仍然保有这种对来源和证据的敏感，并且在别人急于接受一个看起来合理的结论时，能够停下来问清楚依据。
 
-**Which of my current ambitions would still matter?**
-The ambitions that survive are the ones that are about understanding and contribution rather than
-throughput. I still want to understand how markets, institutions and technologies actually work,
-because that understanding is what lets me choose among the answers an agent gives me. I still
-want to build things that are useful to real people, and to become excellent at a craft rather
-than merely productive at it. I also want to teach and to raise the people around me. None of
-those ambitions become obsolete when execution gets cheap; if anything, they become more
-important, because there will be more plausible work to choose from and more ways to be busy
-without being useful.
+我现在的抱负大多围绕理解力和贡献展开，这些抱负在 AI 时代仍然重要。我希望真正理解市场如何定价、企业如何创造现金流、制度如何影响人的行为，因为这种理解决定了我会提出什么问题，也决定了我会不会直接接受一个现成的答案。我仍然希望做出对真实的人有用的东西，希望在一门手艺上达到可以信赖的水平，也希望把经验传给后来的人。执行成本下降之后，选择做什么、拒绝做什么以及如何承担结果，会比以往更加重要，这些抱负也因此更值得坚持。
 
-**What would I want to be known for beyond productivity and professional achievements?**
-I would want to be known for being fair, curious and reliable — the person who tells you the
-awkward truth, who reads the appendix before signing off, who remembers the people behind the
-numbers. I would like to be remembered as someone who made other people better, not as someone
-who produced the most. In this homework, the tempting shortcut was to let a model look at more
-text and hope; the better habit was to check what evidence the answer actually rested on. That is
-the kind of habit I would want people to associate with me.
+除了职业上的成绩，我希望别人记住我是一个公正、可靠、愿意说真话的人。面对不确定的信息，我会说明自己掌握的事实和仍然存在的疑问，并且愿意花时间把不清楚的地方弄清楚。团队里出现分歧时，我希望自己能够先听完各方理由，再给出有依据的判断，并且在判断出错时及时承认和修正。这样的品质无法由 AI 助手代替，因为它们发生在人与人的长期相处之中，也需要一个人在具体情境里反复选择。
 
-**What am I willing to struggle for, even when an AI agent could make the struggle unnecessary?**
-I am willing to struggle for understanding, for craft and for relationships. I want to do the slow
-work of deriving a result myself, at least once, because the struggle changes what I can notice
-later. I want to keep writing and thinking in my own words even when a model can produce a cleaner
-first draft, because the act of composing is how I find out what I believe. I am willing to
-struggle for people too: to have the difficult conversation, to sit with someone who is stuck, to
-repair a mistake instead of hiding it. Those struggles are not inefficiencies; they are how
-character is formed.
+即使 AI 助手可以迅速给出结果，我仍然愿意为理解、手艺和关系付出缓慢而具体的努力。亲自推导一遍公式、读完一份年报的附注、把一个模型从错误改到可靠，这些过程会改变我观察世界的方式，也会让我在下次遇到相似问题时更快发现异常。与人的关系同样需要这种努力，认真听一个人说完、在对方困难时到场、在冲突之后修复信任，这些经历会塑造一个人的耐心和分寸。AI 可以节省时间，这些过程仍然需要我亲自经历，因此我愿意把一部分时间留给这些暂时低效的事情。
 
-**What skills, qualities or experiences would still make me valuable?**
-Judgment about what matters, taste about what is good, and the ability to verify. Domain depth
-still matters: someone has to know which question is worth asking and which number is plausible.
-Communication matters more, not less, because a fluent answer is not the same as a clear one.
-Ethical reasoning matters, because agents will optimize what we measure and we have to choose the
-measures. And the human experiences that cannot be delegated — leading a team through ambiguity,
-earning trust, caring for a client, being present for a family — will remain valuable precisely
-because they are relational. I would add one more: the ability to work well with agents, to
-decompose a problem, specify evidence, and audit the result without outsourcing my judgment.
+在未来仍然有价值的技能包括提出好问题、分辨证据质量、在复杂情境中做取舍、把判断清楚地表达出来，以及与他人建立信任。领域知识依然重要，因为理解业务的人才知道哪个数字异常、哪个假设缺少支持。审美和品味也会变得重要，因为当生成变得廉价，选择哪些内容值得保留、哪些方案值得推进，会成为稀缺能力。伦理判断同样重要，因为 AI 助手会按照被设定的目标行动，设定目标的人需要清楚什么可以接受、什么必须拒绝。
 
-**If my value is no longer determined primarily by what I can do, how will I define who I am?**
-I will define myself by what I choose to attend to, what I am committed to, and how I treat
-people. Capability is becoming abundant; attention, commitment and integrity are not. I am the
-person who keeps a promise, who notices the person who was left out, who is willing to say “I
-don't know” and then go find out. That definition is not a consolation prize for being less
-productive; it is a better answer to the question of who I am, because it does not depend on
-being faster than a machine.
+如果社会不再主要用产出衡量一个人的价值，我会用注意力、承诺和品格来定义自己。我愿意把注意力放在具体的人身上，记住他们说过的话，回应他们的需要；我愿意遵守承诺，在没有人监督的时候也把该做的事情做好；我愿意保持好奇，在现有解释之外继续寻找更完整的解释。这些内容很难被量化，同时决定了我如何与他人相处，也决定了我是否值得被信任。
 
-**What should I start doing differently tomorrow?**
-I will start each morning by writing, by hand, the one decision that matters most that day and the
-evidence I would need to change my mind — before I open any AI tool. Then I will do the first
-45 minutes of that work myself, and only afterwards ask an agent to critique, search or
-accelerate. It is a small change, but it puts judgment before generation, and it makes the habit I
-want — think first, delegate second, verify always — concrete enough to keep.
+从明天开始，我每天早晨会先手写当天最重要的一个决定、支持这个决定的证据以及可能推翻它的信息，然后再打开任何 AI 工具。接下来的四十五分钟里，我会独立完成最困难的那部分工作，之后才让 AI 助手帮助检索、检查和补充。这个习惯可以让我在日常工作里持续练习核对证据和承担结果，也可以让我在依赖工具之前先形成自己的判断。
